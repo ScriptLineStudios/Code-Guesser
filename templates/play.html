@@ -1,0 +1,36 @@
+
+
+<style>
+   .center {
+      text-align: center;
+      }
+</style>
+
+
+<div class = "center">
+   <h1>
+      Which repo does this code come from?
+   </h1>
+   <textarea disabled id="stackoverflow" name="stackoverflow_review" rows=40 cols="150">   
+      {% for line in b_lines %}
+         {{ line }}
+      {% endfor %}
+   </textarea>
+
+   <ol start="0">
+         <li><p>{{ repo_1 }}</p></li>
+         <li><p>{{ repo_2 }}</p></li>
+         <li><p>{{ repo_3 }}</p></li>
+         <li><p>{{ repo_4 }}</p></li>
+   </ol>>
+
+
+   <form action = "/result" method = "post">
+      <p>Which One?</p>
+      <p hidden><input type="text" value='{{ index }}' name="index" /></p>
+      <p><input type = "text" name = "guess" /></p>
+      <p><input type = "submit" value = "submit" /></p>
+   </form>   
+</div>
+
+
